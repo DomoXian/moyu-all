@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: test
+
+# mybatis
+mybatis:
+  mapper-locations: classpath*:mapper/**/*.xml
+  type-aliases-package: com.moyu.dal.model
+  config-location: classpath:mybatis/mybatis-config.xml
