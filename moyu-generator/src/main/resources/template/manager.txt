@@ -1,6 +1,6 @@
 package ${managerPackage};
 
-import com.moyu.dao.common.PageResult;
+import com.moyu.dal.common.PageResult;
 import ${doPackage}.${className}${doSuffix};
 import ${queryPackage}.${className}${queryPrefix};
 

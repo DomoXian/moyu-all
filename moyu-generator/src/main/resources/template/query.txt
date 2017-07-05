@@ -1,8 +1,8 @@
 package ${queryPackage};
 
 
-import com.moyu.dao.common.BaseCriteria;
-import com.moyu.dao.common.BaseQuery;
+import com.moyu.dal.common.BaseCriteria;
+import com.moyu.dal.common.BaseQuery;
 import org.apache.commons.lang.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
 

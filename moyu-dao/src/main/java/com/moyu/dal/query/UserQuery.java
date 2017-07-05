@@ -1,8 +1,8 @@
 package com.moyu.dal.query;
 
 
-import com.moyu.dao.common.BaseCriteria;
-import com.moyu.dao.common.BaseQuery;
+import com.moyu.dal.common.BaseCriteria;
+import com.moyu.dal.common.BaseQuery;
 import org.apache.commons.lang.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
 
@@ -40,7 +40,7 @@ public class UserQuery extends BaseQuery implements Serializable {
     /**
      * This class corresponds to the database table user
      */
-         protected abstract static class GeneratedCriteria extends BaseCriteria {
+        protected abstract static class GeneratedCriteria extends BaseCriteria {
 
         protected GeneratedCriteria() {
             super();
