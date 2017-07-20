@@ -40,7 +40,7 @@ public class UserQuery extends BaseQuery implements Serializable {
     /**
      * This class corresponds to the database table user
      */
-        protected abstract static class GeneratedCriteria extends BaseCriteria {
+         protected abstract static class GeneratedCriteria extends BaseCriteria {
 
         protected GeneratedCriteria() {
             super();

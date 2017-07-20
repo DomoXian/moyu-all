@@ -13,7 +13,7 @@ public class UserDO implements Serializable {
      * 用户id
      * user.user_id
      */
-    private Integer userId;
+    private Long userId;
 
     /**
      * 登录名
@@ -32,5 +32,17 @@ public class UserDO implements Serializable {
      * user.user_status
      */
     private Integer userStatus;
+
+    /**
+     * 
+     * user.gmt_create
+     */
+    private Date gmtCreate;
+
+    /**
+     * 
+     * user.gmt_modified
+     */
+    private Date gmtModified;
 
 }

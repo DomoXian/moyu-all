@@ -1,2 +1,5 @@
 server:
   port: 8081
+logging:
+  level: warn
+  file: ./log/dev.log
