@@ -39,7 +39,7 @@ public class MyBatisGenConst {
     // mapper java 输出目录
     public static final String MAPPER_JAVA_DIR = WORK_DIR + "moyu-dao/src/main/java/com/moyu/dal/mapper";
 
-    public static final String MANAGER_JAVA_DIR = WORK_DIR + "seat-core/src/main/java/com/moyu/manager";
+    public static final String MANAGER_JAVA_DIR = WORK_DIR + "moyu-dao/src/main/java/com/moyu/manager";
     public static final String MANAGER_IMPL_JAVA_DIR =  MANAGER_JAVA_DIR +"/impl";
 
 

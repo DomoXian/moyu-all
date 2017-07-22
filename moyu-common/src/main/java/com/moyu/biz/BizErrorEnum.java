@@ -1,4 +1,4 @@
-package com.moyu.common.domain;
+package com.moyu.biz;
 
 import lombok.Getter;
 

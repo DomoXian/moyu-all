@@ -226,6 +226,76 @@ public class UserQuery extends BaseQuery implements Serializable {
             return (Criteria) this;
         }
 
+        public Criteria andUserNameIsNull() {
+            addCriterion("user_name is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserNameIsNotNull() {
+            addCriterion("user_name is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserNameEqualTo(String value) {
+            addCriterion("user_name =", value, "userName");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserNameNotEqualTo(String value) {
+            addCriterion("user_name <>", value, "userName");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserNameGreaterThan(String value) {
+            addCriterion("user_name >", value, "userName");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserNameGreaterThanOrEqualTo(String value) {
+            addCriterion("user_name >=", value, "userName");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserNameLessThan(String value) {
+            addCriterion("user_name <", value, "userName");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserNameLessThanOrEqualTo(String value) {
+            addCriterion("user_name <=", value, "userName");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserNameLike(String value) {
+            addCriterion("user_name like", value, "userName");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserNameNotLike(String value) {
+            addCriterion("user_name not like", value, "userName");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserNameIn(List<String> values) {
+            addCriterion("user_name in", values, "userName");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserNameNotIn(List<String> values) {
+            addCriterion("user_name not in", values, "userName");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserNameBetween(String value1, String value2) {
+            addCriterion("user_name between", value1, value2, "userName");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserNameNotBetween(String value1, String value2) {
+            addCriterion("user_name not between", value1, value2, "userName");
+            return (Criteria) this;
+        }
+
         public Criteria andLoginNameIsNull() {
             addCriterion("login_name is null");
             return (Criteria) this;
@@ -366,6 +436,76 @@ public class UserQuery extends BaseQuery implements Serializable {
             return (Criteria) this;
         }
 
+        public Criteria andUserMobileIsNull() {
+            addCriterion("user_mobile is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserMobileIsNotNull() {
+            addCriterion("user_mobile is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserMobileEqualTo(String value) {
+            addCriterion("user_mobile =", value, "userMobile");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserMobileNotEqualTo(String value) {
+            addCriterion("user_mobile <>", value, "userMobile");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserMobileGreaterThan(String value) {
+            addCriterion("user_mobile >", value, "userMobile");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserMobileGreaterThanOrEqualTo(String value) {
+            addCriterion("user_mobile >=", value, "userMobile");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserMobileLessThan(String value) {
+            addCriterion("user_mobile <", value, "userMobile");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserMobileLessThanOrEqualTo(String value) {
+            addCriterion("user_mobile <=", value, "userMobile");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserMobileLike(String value) {
+            addCriterion("user_mobile like", value, "userMobile");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserMobileNotLike(String value) {
+            addCriterion("user_mobile not like", value, "userMobile");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserMobileIn(List<String> values) {
+            addCriterion("user_mobile in", values, "userMobile");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserMobileNotIn(List<String> values) {
+            addCriterion("user_mobile not in", values, "userMobile");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserMobileBetween(String value1, String value2) {
+            addCriterion("user_mobile between", value1, value2, "userMobile");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserMobileNotBetween(String value1, String value2) {
+            addCriterion("user_mobile not between", value1, value2, "userMobile");
+            return (Criteria) this;
+        }
+
         public Criteria andUserStatusIsNull() {
             addCriterion("user_status is null");
             return (Criteria) this;
@@ -433,6 +573,146 @@ public class UserQuery extends BaseQuery implements Serializable {
 
         public Criteria andUserStatusNotBetween(Integer value1, Integer value2) {
             addCriterion("user_status not between", value1, value2, "userStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexIsNull() {
+            addCriterion("sex is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexIsNotNull() {
+            addCriterion("sex is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexEqualTo(Integer value) {
+            addCriterion("sex =", value, "sex");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexNotEqualTo(Integer value) {
+            addCriterion("sex <>", value, "sex");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexGreaterThan(Integer value) {
+            addCriterion("sex >", value, "sex");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexGreaterThanOrEqualTo(Integer value) {
+            addCriterion("sex >=", value, "sex");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexLessThan(Integer value) {
+            addCriterion("sex <", value, "sex");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexLessThanOrEqualTo(Integer value) {
+            addCriterion("sex <=", value, "sex");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexLike(Integer value) {
+            addCriterion("sex like", value, "sex");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexNotLike(Integer value) {
+            addCriterion("sex not like", value, "sex");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexIn(List<Integer> values) {
+            addCriterion("sex in", values, "sex");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexNotIn(List<Integer> values) {
+            addCriterion("sex not in", values, "sex");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexBetween(Integer value1, Integer value2) {
+            addCriterion("sex between", value1, value2, "sex");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexNotBetween(Integer value1, Integer value2) {
+            addCriterion("sex not between", value1, value2, "sex");
+            return (Criteria) this;
+        }
+
+        public Criteria andBirthDateIsNull() {
+            addCriterion("birth_date is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBirthDateIsNotNull() {
+            addCriterion("birth_date is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBirthDateEqualTo(java.sql.Date value) {
+            addCriterion("birth_date =", value, "birthDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andBirthDateNotEqualTo(java.sql.Date value) {
+            addCriterion("birth_date <>", value, "birthDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andBirthDateGreaterThan(java.sql.Date value) {
+            addCriterion("birth_date >", value, "birthDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andBirthDateGreaterThanOrEqualTo(java.sql.Date value) {
+            addCriterion("birth_date >=", value, "birthDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andBirthDateLessThan(java.sql.Date value) {
+            addCriterion("birth_date <", value, "birthDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andBirthDateLessThanOrEqualTo(java.sql.Date value) {
+            addCriterion("birth_date <=", value, "birthDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andBirthDateLike(java.sql.Date value) {
+            addCriterion("birth_date like", value, "birthDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andBirthDateNotLike(java.sql.Date value) {
+            addCriterion("birth_date not like", value, "birthDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andBirthDateIn(List<java.sql.Date> values) {
+            addCriterion("birth_date in", values, "birthDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andBirthDateNotIn(List<java.sql.Date> values) {
+            addCriterion("birth_date not in", values, "birthDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andBirthDateBetween(java.sql.Date value1, java.sql.Date value2) {
+            addCriterion("birth_date between", value1, value2, "birthDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andBirthDateNotBetween(java.sql.Date value1, java.sql.Date value2) {
+            addCriterion("birth_date not between", value1, value2, "birthDate");
             return (Criteria) this;
         }
 

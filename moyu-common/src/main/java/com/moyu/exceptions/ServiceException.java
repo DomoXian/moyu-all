@@ -1,4 +1,4 @@
-package com.moyu.common.exceptions;
+package com.moyu.exceptions;
 
 /**
  * Created by XianGuo

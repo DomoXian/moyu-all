@@ -1,5 +1,7 @@
 package com.moyu.model.bo;
 
+import java.util.Date;
+
 /**
  * Created by XianGuo
  * Date: 2017-07-06 20:01
@@ -7,26 +9,62 @@ package com.moyu.model.bo;
  */
 public class UserBO {
     /**
+     *
      * 用户id
-     * user.user_id
      */
-    private Integer userId;
+    private Long userId;
 
     /**
-     * 登录名
-     * user.login_name
+     *
+     * 用户姓名
+     */
+    private String userName;
+
+    /**
+     *
+     * 登录名称
      */
     private String loginName;
 
     /**
+     *
      * 登录密码
-     * user.login_pwd
      */
     private String loginPwd;
 
     /**
-     * 用户状态 0 正常 -1 删除
-     * user.user_status
+     *
+     * 手机号码
+     */
+    private String userMobile;
+
+    /**
+     *
+     * 用户状态
      */
     private Integer userStatus;
+
+    /**
+     *
+     * 性别
+     */
+    private Integer sex;
+
+    /**
+     *
+     * 出生日期
+     */
+    private java.sql.Date birthDate;
+
+    /**
+     *
+     * 操作时间
+     */
+    private Date gmtModified;
+
+    /**
+     *
+     * 创建时间
+     */
+    private Date gmtCreate;
 }

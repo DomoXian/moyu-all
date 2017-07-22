@@ -1,4 +1,4 @@
-package com.moyu.common.domain;
+package com.moyu.biz;
 
 import lombok.Data;
 
@@ -10,6 +10,7 @@ import java.io.Serializable;
  * 数据封装
  */
 @Data
+@SuppressWarnings("all")
 public class BizResult<T> implements Serializable {
 
     private boolean isSuccess;
@@ -25,4 +26,12 @@ public class BizResult<T> implements Serializable {
         return result;
     }
 
+
+    public boolean isSuccess() {
+        return isSuccess;
+    }
+
+    public boolean isFail() {
+        return !isSuccess;
+    }
 }

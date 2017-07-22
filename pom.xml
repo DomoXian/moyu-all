@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+    <properties>
+        <model.version>4.0.0</model.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <moyu.version>1.0.1</moyu.version>
+        <moyu.common.version>0.01</moyu.common.version>
+    </properties>
+
+    <modelVersion>${model.version}</modelVersion>
 
     <groupId>com.moyu</groupId>
     <artifactId>moyu-all</artifactId>
-    <version>1.0</version>
+    <version>${moyu.version}</version>
     <packaging>pom</packaging>
 
     <name>moyu-all</name>
@@ -21,13 +30,32 @@
         <module>moyu-generator</module>
     </modules>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-    </properties>
+
     <dependencyManagement>
         <dependencies>
+
+            <!--本地依赖-->
+            <dependency>
+                <groupId>com.moyu</groupId>
+                <artifactId>moyu-common</artifactId>
+                <version>${moyu.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.moyu</groupId>
+                <artifactId>moyu-core</artifactId>
+                <version>${moyu.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.moyu</groupId>
+                <artifactId>moyu-dao</artifactId>
+                <version>${moyu.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.moyu</groupId>
+                <artifactId>moyu-generator</artifactId>
+                <version>${moyu.version}</version>
+            </dependency>
+
             <!--第三方库-->
             <dependency>
                 <groupId>org.apache.commons</groupId>

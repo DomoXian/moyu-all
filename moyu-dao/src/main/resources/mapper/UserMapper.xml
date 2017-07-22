@@ -5,9 +5,13 @@
         <id column="user_id" jdbcType="BIGINT" property="userId" />
         <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
         <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
+        <result column="user_name" jdbcType="VARCHAR" property="userName" />
         <result column="login_name" jdbcType="VARCHAR" property="loginName" />
         <result column="login_pwd" jdbcType="VARCHAR" property="loginPwd" />
+        <result column="user_mobile" jdbcType="VARCHAR" property="userMobile" />
         <result column="user_status" jdbcType="INTEGER" property="userStatus" />
+        <result column="sex" jdbcType="INTEGER" property="sex" />
+        <result column="birth_date" jdbcType="TIMESTAMP" property="birthDate" />
     </resultMap>
 
     <sql id="Query_Where_Clause">
@@ -71,7 +75,7 @@
     </sql>
 
     <sql id="Base_Column_List">
-        user_id,gmt_create,gmt_modified,login_name,login_pwd,user_status
+        user_id,gmt_create,gmt_modified,user_name,login_name,login_pwd,user_mobile,user_status,sex,birth_date
     </sql>
 
     <select id="selectByQuery" parameterType="com.moyu.dal.query.UserQuery" resultMap="BaseResultMap">
@@ -112,26 +116,50 @@
         insert into user
         <trim prefix="(" suffix=")" suffixOverrides=",">
             gmt_create,gmt_modified,
+            <if test="userName != null">
+                user_name,
+            </if>
             <if test="loginName != null">
                 login_name,
             </if>
             <if test="loginPwd != null">
                 login_pwd,
             </if>
+            <if test="userMobile != null">
+                user_mobile,
+            </if>
             <if test="userStatus != null">
                 user_status,
+            </if>
+            <if test="sex != null">
+                sex,
+            </if>
+            <if test="birthDate != null">
+                birth_date,
             </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             now(),now(),
+            <if test="userName != null">
+                #{userName,jdbcType=VARCHAR},
+            </if>
             <if test="loginName != null">
                 #{loginName,jdbcType=VARCHAR},
             </if>
             <if test="loginPwd != null">
                 #{loginPwd,jdbcType=VARCHAR},
             </if>
+            <if test="userMobile != null">
+                #{userMobile,jdbcType=VARCHAR},
+            </if>
             <if test="userStatus != null">
                 #{userStatus,jdbcType=INTEGER},
+            </if>
+            <if test="sex != null">
+                #{sex,jdbcType=INTEGER},
+            </if>
+            <if test="birthDate != null">
+                #{birthDate,jdbcType=TIMESTAMP},
             </if>
         </trim>
     </insert>
@@ -147,14 +175,26 @@
         update user
         <set>
             gmt_modified=now(),
+            <if test="record.userName != null">
+                user_name = #{record.userName,jdbcType=VARCHAR},
+            </if>
             <if test="record.loginName != null">
                 login_name = #{record.loginName,jdbcType=VARCHAR},
             </if>
             <if test="record.loginPwd != null">
                 login_pwd = #{record.loginPwd,jdbcType=VARCHAR},
             </if>
+            <if test="record.userMobile != null">
+                user_mobile = #{record.userMobile,jdbcType=VARCHAR},
+            </if>
             <if test="record.userStatus != null">
                 user_status = #{record.userStatus,jdbcType=INTEGER},
+            </if>
+            <if test="record.sex != null">
+                sex = #{record.sex,jdbcType=INTEGER},
+            </if>
+            <if test="record.birthDate != null">
+                birth_date = #{record.birthDate,jdbcType=TIMESTAMP},
             </if>
         </set>
         <if test="_parameter != null">
@@ -164,9 +204,13 @@
 
     <update id="updateByQuery" parameterType="map">
         update user set
+        user_name = #{record.userName,jdbcType=VARCHAR},
         login_name = #{record.loginName,jdbcType=VARCHAR},
         login_pwd = #{record.loginPwd,jdbcType=VARCHAR},
+        user_mobile = #{record.userMobile,jdbcType=VARCHAR},
         user_status = #{record.userStatus,jdbcType=INTEGER},
+        sex = #{record.sex,jdbcType=INTEGER},
+        birth_date = #{record.birthDate,jdbcType=TIMESTAMP},
         gmt_modified = now()
         <if test="_parameter != null">
             <include refid="Update_By_Query_Where_Clause" />
@@ -177,14 +221,26 @@
         update user
         <set>
             gmt_modified=now(),
+            <if test="userName != null">
+                user_name = #{userName,jdbcType=VARCHAR},
+            </if>
             <if test="loginName != null">
                 login_name = #{loginName,jdbcType=VARCHAR},
             </if>
             <if test="loginPwd != null">
                 login_pwd = #{loginPwd,jdbcType=VARCHAR},
             </if>
+            <if test="userMobile != null">
+                user_mobile = #{userMobile,jdbcType=VARCHAR},
+            </if>
             <if test="userStatus != null">
                 user_status = #{userStatus,jdbcType=INTEGER},
+            </if>
+            <if test="sex != null">
+                sex = #{sex,jdbcType=INTEGER},
+            </if>
+            <if test="birthDate != null">
+                birth_date = #{birthDate,jdbcType=TIMESTAMP},
             </if>
         </set>
         where user_id = #{userId,jdbcType=BIGINT}

@@ -1,4 +1,4 @@
-package com.moyu.common.serializeFilter;
+package com.moyu.serializeFilter;
 
 import com.alibaba.fastjson.serializer.NameFilter;
 

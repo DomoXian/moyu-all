@@ -1,6 +1,6 @@
 package com.moyu.service;
 
-import com.moyu.common.domain.BizResult;
+import com.moyu.biz.BizResult;
 import com.moyu.dal.model.UserDO;
 import com.moyu.model.form.UserForm;
 
@@ -12,15 +12,31 @@ public interface IUserService {
     /**
      * 登录
      */
-    void login();
+    BizResult<Long> login(UserDO userDO);
 
-    void insertUser();
+    /**
+     * 插入用户
+     */
+    BizResult<Long> insertUser(UserDO userDO);
 
-    void updateUser();
+    /**
+     * 更新修改用户信息
+     */
+    BizResult<Long> updateUser(UserDO userDO);
 
     /**
      * 注册
      */
-    BizResult<UserDO> register(UserForm userForm);
+    BizResult<UserDO> register(UserDO userDO);
+
+    /**
+     * 根据条件查询用户信息
+     */
+    BizResult<UserDO> selectByQuery(UserDO userDO);
+
+    /**
+     * 校验用户信息
+     */
+    BizResult validUser(UserDO userDO);
 
 }
