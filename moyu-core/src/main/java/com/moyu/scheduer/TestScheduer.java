@@ -14,6 +14,6 @@ public class TestScheduer {
 
     @Scheduled(fixedDelay = 6000)
     public void test(){
-        log.error("打印");
+//        log.error("打印");
     }
 }

@@ -62,16 +62,16 @@ public class UserServiceImpl implements IUserService {
         if (userDO.getUserId() != null) {
             criteria.andUserIdEqualTo(userDO.getUserId());
         }
-        if (StringUtil.isEmpty(userDO.getUserName())) {
+        if (StringUtil.isNotEmpty(userDO.getUserName())) {
             criteria.andUserNameLike(userDO.getUserName());
         }
-        if (StringUtil.isEmpty(userDO.getLoginName())) {
+        if (StringUtil.isNotEmpty(userDO.getLoginName())) {
             criteria.andLoginNameEqualTo(userDO.getLoginName());
         }
         if (userDO.getUserStatus() != null) {
             criteria.andUserStatusEqualTo(userDO.getUserStatus());
         }
-        if (StringUtil.isEmpty(userDO.getUserMobile())) {
+        if (StringUtil.isNotEmpty(userDO.getUserMobile())) {
             criteria.andUserMobileEqualTo(userDO.getUserMobile());
         }
         List<UserDO> userDOS = userManager.selectByQuery(userQuery);

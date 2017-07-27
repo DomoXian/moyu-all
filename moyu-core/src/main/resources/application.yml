@@ -4,8 +4,8 @@ spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
     username: root
-    password: alixian
-    url: jdbc:mysql://localhost:3306/moyu_db?useUnicode=true&characterEncoding=utf-8&useSSL=true
+    password: Alix123456
+    url: jdbc:mysql://rm-uf643tux78gi0m557o.mysql.rds.aliyuncs.com/db_moyu?useUnicode=true&characterEncoding=utf-8&useSSL=true
     type: com.alibaba.druid.pool.DruidDataSource
 
     #连接池的配置信息
@@ -28,6 +28,28 @@ spring:
     loginUserName: admin
     loginPassword: Hello@1234
 
+  #redis配置
+  redis:
+    #服务器地址
+    host: r-uf641dc75a974ed4.redis.rds.aliyuncs.com
+    #数据库索引（默认为0）
+    database: 0
+    #端口
+    port: 6379
+    #密码
+    password: Alix123456
+    #连接池
+    pool:
+      #最大连接数
+      max-active: 300
+      #最大阻塞等待时间
+      max-wait: 10000
+      #最大空闲连接
+      max-idle: 100
+      #最小空闲连接
+      min-idle: 0
+    #连接超时
+    timeout: 30000
 
 
 # mybatis
