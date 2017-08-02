@@ -15,6 +15,7 @@ public class MoyuWebApplication {
 
 	@GetMapping("/hello")
 	public String hello(){
+		// 测试提交
 		return "hello";
 	}
 }
