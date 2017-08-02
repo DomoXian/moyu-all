@@ -11,4 +11,5 @@ public class MoyuCoreApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MoyuCoreApplication.class, args);
 	}
+
 }

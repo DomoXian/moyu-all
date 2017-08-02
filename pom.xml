@@ -2,7 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <properties>
-        <model.version>4.0.0</model.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
@@ -10,7 +9,7 @@
         <moyu.common.version>0.01</moyu.common.version>
     </properties>
 
-    <modelVersion>${model.version}</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.moyu</groupId>
     <artifactId>moyu-all</artifactId>

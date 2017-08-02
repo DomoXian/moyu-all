@@ -2,4 +2,4 @@ server:
   port: 8085
 logging:
   level: trace
-  file: ./log/test.log
+  file: .logs/test.log
