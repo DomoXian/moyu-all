@@ -1,5 +1,6 @@
 FROM daocloud.io/centos:7
 ADD start.sh /home/admin
+RUN mkdir /home/admin/app/src/app
 ADD . /home/admin/app/src/app
 RUN chown -R admin:admin /home/admin
 USER admin
