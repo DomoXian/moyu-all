@@ -1,4 +1,4 @@
-FROM daocloud.io/centos:7
+FROM maven
 ADD start.sh /home/admin/
 ADD . /home/admin/app/src/app/
 
