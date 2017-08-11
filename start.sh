@@ -33,29 +33,11 @@ fi
 if [ ! -f "$BUILD_LOG" ];then
     touch $BUILD_LOG
 fi
-#scp publish@172.21.10.74:/home/publish/antx/antx-${PROJECT_NAME}.properties /root
-#sshpass -p 'taobao1234' scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null publish@172.21.10.70:/home/publish/antx-${ENV}/antx-${PROJECT_NAME}.properties /home/admin
+# 开始打包
 cd $PROJECT_HOME/src/app
-#rm -rf .ssh
-#rm -rf jetty7.3.1
-#rm Dockerfile apache-maven-3.3.9-bin.tar.gz nginx.conf settings.xml start.sh antx-buick.properties
-#cd $PROJECT_HOME_SRC/app
-#git clone git@git.dawanju.net:mhc/buick.git
-#sed -i "s/dubbo.protocol.port  = [[:digit:]]\{2,5\}/dubbo.protocol.port  = ${DUBBO_PORT}/g" $ANTX_PATH
 cd $PROJECT_HOME_SRC/app
 mvn clean package -Dmaven.test.skip -U
-#cd $PROJECT_HOME_SRC/app/$PROJECT_NAME-deploy/src/main/assembly
-#sed -i 's|../${PROJECT_NAME}-web/target/${PROJECT_NAME}-web-1.0-SNAPSHOT|../${PROJECT_NAME}-'${MODULE_NAME}'/target/${PROJECT_NAME}-'${MODULE_NAME}'-1.0-SNAPSHOT|g' assembly.xml
 
-#cd $PROJECT_HOME_SRC/app/$PROJECT_NAME-deploy
-#pwd
-#mvn assembly:assembly
-#mkdir -p $PROJECT_NAME/target
-#cp -af  $PROJECT_HOME_SRC/$PROJECT_NAME/$PROJECT_NAME-deploy/target/$PROJECT_NAME.jar $PROJECT_HOME/target/$PROJECT_NAME.jar
-#pid=`ps -C java  | grep -- 9090 | awk '{print $1}'`
-#if [ -n "$pid" ];then
-  #kill -9 $pid
-#fi
 java $JAVA_OPTIONS -jar $PROJECT_HOME_SRC/app/${JAR_DIR}/target/$PROJECT_NAME.jar --spring.profiles.active=$SPRING_PROFILES_ACTIVE --spring.dubbo.protocol.port=$SPRING_DUBBO_PROTOCOL_PORT --server.port=$JETTY_PORT | tee $BUILD_LOG 
 running() {
   local PID=$(cat "$1" 2>/dev/null) || return 1

@@ -17,6 +17,8 @@
     </parent>
 
     <dependencies>
+
+        <!--spring boot组件-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -32,20 +34,29 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
         <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!--项目依赖-->
+        <!--本地依赖-->
+        <dependency>
+            <groupId>com.moyu</groupId>
+            <artifactId>moyu-common</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>com.moyu</groupId>
             <artifactId>moyu-dao</artifactId>
         </dependency>
+
+        <!--第三方库依赖-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
         </dependency>
+
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
@@ -60,14 +71,14 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
-        <!--本地依赖-->
         <dependency>
-            <groupId>com.moyu</groupId>
-            <artifactId>moyu-common</artifactId>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
         </dependency>
     </dependencies>
 
     <build>
+        <finalName>moyu</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

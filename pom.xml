@@ -6,7 +6,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <moyu.version>1.0.1</moyu.version>
-        <moyu.common.version>0.01</moyu.common.version>
+        <moyu.common.version>0.0.1</moyu.common.version>
     </properties>
 
     <modelVersion>4.0.0</modelVersion>
@@ -24,11 +24,11 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <modules>
+        <module>moyu-common</module>
         <module>moyu-dao</module>
         <module>moyu-core</module>
         <module>moyu-generator</module>
     </modules>
-
 
     <dependencyManagement>
         <dependencies>
@@ -127,6 +127,22 @@
 
         </dependencies>
     </dependencyManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
-
+    <repositories>
+        
+    </repositories>
 </project>
