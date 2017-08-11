@@ -1,4 +1,4 @@
-FROM maven
+FROM maven:alpine
 ADD start.sh /home/admin/
 ADD . /home/admin/app/src/app/
 
