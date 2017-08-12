@@ -4,6 +4,7 @@ TARGET_HOME=$PROJECT_HOME/moyu-all/moyu-core/target
 TARGET_NAME=moyu.jar
 cd /home/admin/app/
 pwd
+ls
 #cd /home/admin/app/moyu-all
 #mvn clean install -Dmaven.test.skip&& mvn package -Dmaven.test.skip
 #cd $TARGET_HOME
