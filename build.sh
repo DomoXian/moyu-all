@@ -1,14 +1,15 @@
 # !/bin/bash
-PROJECT_HOME=/home/admin/app
-TARGET_HOME=$PROJECT_HOME/moyu-all/moyu-core/target
-TARGET_NAME=moyu.jar
-cd /home/admin/app/
+PROJECT_NAME=moyu
+PROJECT_HOME=/home/admin/app/
+JAR_DIR=$PROJECT_NAME-core/target
+JAR_NAME=$PROJECT_NAME.jar
+cd $PROJECT_HOME
+ls
+mvn clean install -Dmaven.test.skip&& mvn package -Dmaven.test.skip
+cd $JAR_DIR
 pwd
 ls
-#cd /home/admin/app/moyu-all
-#mvn clean install -Dmaven.test.skip&& mvn package -Dmaven.test.skip
-#cd $TARGET_HOME
-#MOYU_PID=`ps -ef | grep "moyu" | grep -v grep | awk '{print $2}'`
-#echo "Moyu PID = $MOYU_PID"
-#kill -9 MOYU_PID
-#java -jar $TARGET_HOME/$TARGET_NAME --spring.profiles.active=dev > ./moyu.log &
+MOYU_PID=`ps -ef | grep "moyu" | grep -v grep | awk '{print $2}'`
+echo "Moyu PID = $MOYU_PID"
+kill -9 MOYU_PID
+java -jar JAR_NAME --spring.profiles.active=dev > ./moyu.log &
