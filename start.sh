@@ -5,7 +5,6 @@ export PROJECT_HOME_SRC=$PROJECT_HOME/src
 export PROJECT_HOME_LOGS_O=$PROJECT_HOME/logs/$PROJECT_NAME/${ENV}
 export PROJECT_HOME_TARGET=$PROJECT_HOME/target
 export PROJECT_HOME_LOGS=$PROJECT_HOME/src/app/logs
-
 # 日志地址
 export BUILD_LOG=${PROJECT_HOME_LOGS_O}/jetty_stdout.log
 if [ -n $SERVER_INDEX ];then
@@ -35,10 +34,10 @@ if [ ! -f "$BUILD_LOG" ];then
 fi
 # 开始打包
 cd $PROJECT_HOME/src/app
-cd $PROJECT_HOME_SRC/app
+cd $PROJECT_HOME_SRC/
 mvn clean package -Dmaven.test.skip -U
 
-java $JAVA_OPTIONS -jar $PROJECT_HOME_SRC/app/${JAR_DIR}/target/$PROJECT_NAME.jar --spring.profiles.active=$SPRING_PROFILES_ACTIVE --spring.dubbo.protocol.port=$SPRING_DUBBO_PROTOCOL_PORT --server.port=$JETTY_PORT | tee $BUILD_LOG 
+java $JAVA_OPTIONS -jar $PROJECT_HOME_SRC/app/${JAR_DIR}/target/$PROJECT_NAME.jar --spring.profiles.active=$SPRING_PROFILES_ACTIVE
 running() {
   local PID=$(cat "$1" 2>/dev/null) || return 1
   kill -0 "$PID" 2>/dev/null
