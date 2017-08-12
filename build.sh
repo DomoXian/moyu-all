@@ -1,5 +1,5 @@
 # !/bin/bash
-TARGET_HOME=~/moyu-all/moyu-core/target
+TARGET_HOME=/home/admin/app/moyu-all/moyu-core/target
 TARGET_NAME=moyu.jar
 mvn clean install -Dmaven.test.skip&& mvn package -Dmaven.test.skip
 cd $TARGET_HOME
