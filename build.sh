@@ -1,6 +1,7 @@
 # !/bin/bash
 TARGET_HOME=/home/admin/app/moyu-core/target
 TARGET_NAME=moyu.jar
+cd /home/admin/app
 mvn clean install -Dmaven.test.skip&& mvn package -Dmaven.test.skip
 cd $TARGET_HOME
 MOYU_PID=`ps -ef | grep "moyu" | grep -v grep | awk '{print $2}'`
