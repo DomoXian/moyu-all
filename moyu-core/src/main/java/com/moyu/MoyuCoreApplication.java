@@ -15,9 +15,14 @@ public class MoyuCoreApplication {
 		SpringApplication.run(MoyuCoreApplication.class, args);
 	}
 
-	@GetMapping
+	@GetMapping("/hello")
 	public String hello(){
 		return "hello";
+	}
+
+	@GetMapping("/bye")
+	public String bye(){
+		return"good bye";
 	}
 
 }
