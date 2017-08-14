@@ -31,13 +31,13 @@ spring:
   #redis配置
   redis:
     #服务器地址
-    host: r-uf641dc75a974ed4.redis.rds.aliyuncs.com
+    host: 106.14.144.168
     #数据库索引（默认为0）
     database: 0
     #端口
     port: 6379
     #密码
-    password: Alix123456
+    password: r-uf641dc75a974ed4:Alix123456
     #连接池
     pool:
       #最大连接数

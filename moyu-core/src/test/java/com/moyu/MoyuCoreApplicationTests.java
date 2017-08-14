@@ -19,6 +19,7 @@ public class MoyuCoreApplicationTests {
 
     @Autowired
     private RedisService redisService;
+
     @Test
     public void redisService(){
         UserDO userDO = userManager.selectByPrimaryKey(1L);
