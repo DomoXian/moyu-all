@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: dev
+    active: local
   datasource:
     driverClassName: com.mysql.jdbc.Driver
     username: root
@@ -51,9 +51,14 @@ spring:
     #连接超时
     timeout: 30000
 
-
 # mybatis
 mybatis:
   mapper-locations: classpath*:mapper/**/*.xml
   type-aliases-package: com.moyu.dal.model
   config-location: classpath:mybatis/mybatis-config.xml
+
+# 日志配置
+logging:
+  path: /Users/xianguo1/logs
+  config: classpath:moyu-logback.xml
+

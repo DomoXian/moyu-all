@@ -5,7 +5,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
  * 数据源链接参数
- * Created by zhengtai on 17/04/27 17:10.
  */
 @Data
 @ConfigurationProperties(prefix = "spring.datasource")

@@ -9,7 +9,7 @@ import lombok.Getter;
  */
 public enum BizErrorEnum {
     RESULT_OK("1001", "请求成功"),
-    RESULR_EMPTY("1002", "数据为空");
+    RESULT_EMPTY("1002", "数据为空");
 
     @Getter
     private String code;
