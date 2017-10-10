@@ -18,11 +18,9 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         super.addResourceHandlers(registry);
     }
 
-
-
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new MoyuInterceptor()).excludePathPatterns("/login.html");
+        registry.addInterceptor(new MoyuInterceptor()).excludePathPatterns("/login.html","/error");
         super.addInterceptors(registry);
     }
 }

@@ -27,7 +27,9 @@ public class MoyuInterceptor extends HandlerInterceptorAdapter {
         }
         HandlerMethod handlerMethod  = (HandlerMethod) handler;
         NoAuth noAuth = handlerMethod.getMethodAnnotation(NoAuth.class);
-
+        log.info("ip:{}",request.getLocalAddr());
+        log.info("ip:{}",request.getRemoteUser());
+        log.info("serverName:{}",request.getServerName());
         if(noAuth !=null){
             return true;
         }
@@ -36,13 +38,14 @@ public class MoyuInterceptor extends HandlerInterceptorAdapter {
 
         }else{
             log.info("跳转到登录页"+request.getContextPath());
-//            response.sendRedirect(request.getContextPath()+"/login.html");
+            response.sendRedirect(request.getContextPath()+"/login.html");
+            return true;
         }
 
 
         // TODO: 13/9/17 需要登录
         log.info("request：{}", JSONUtil.toJSONString(request.getRequestedSessionId()));
 
-        return super.preHandle(request, response, handler);
+        return true;
     }
 }

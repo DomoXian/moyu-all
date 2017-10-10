@@ -1,43 +1,28 @@
 package com.moyu.biz;
 
+import com.moyu.enums.BaseEnum;
+import lombok.Data;
+
 /**
  * Created by XianGuo
- * Date: 2017-07-23 01:01
- * 异常
+ * Date: 2017-09-19 19:46
  */
-public class BizException extends Exception {
+@Data
+public class BizException extends RuntimeException {
 
-    private String code;
-    private String msg;
+    private Integer code;
 
-    public BizException() {
-        super();
-    }
+    private String desc;
 
-    public BizException(String msg) {
-        super(msg);
-        this.msg = msg;
-    }
-
-    public BizException(String code, String msg) {
-        super(msg);
+    public BizException(Integer code, String desc) {
+        super(desc);
         this.code = code;
-        this.msg = msg;
+        this.desc = desc;
     }
 
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public String getMsg() {
-        return msg;
-    }
-
-    public void setMsg(String msg) {
-        this.msg = msg;
+    public BizException(BaseEnum codeEnum) {
+        super(codeEnum.getDesc());
+        this.code = codeEnum.getCode();
+        this.desc = codeEnum.getDesc();
     }
 }
