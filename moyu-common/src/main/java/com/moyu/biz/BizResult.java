@@ -1,6 +1,5 @@
 package com.moyu.biz;
 
-import lombok.Data;
 
 import java.io.Serializable;
 
@@ -9,7 +8,6 @@ import java.io.Serializable;
  * Date: 2017-07-06 19:42
  * 数据封装
  */
-@Data
 @SuppressWarnings("all")
 public class BizResult<T> implements Serializable {
 
@@ -26,12 +24,44 @@ public class BizResult<T> implements Serializable {
         return result;
     }
 
-
     public boolean isSuccess() {
         return isSuccess;
     }
 
-    public boolean isFail() {
-        return !isSuccess;
+    public void setSuccess(boolean success) {
+        isSuccess = success;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        if (!this.isSuccess) {
+            this.message = message;
+        }
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        if (data == null) {
+            this.isSuccess = false;
+            this.data = null;
+        } else {
+            this.message = "请求成功";
+            this.isSuccess = true;
+            this.data = data;
+        }
     }
 }

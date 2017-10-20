@@ -43,7 +43,7 @@ public class UserServiceImpl implements IUserService {
     public BizResult<UserDO> register(UserDO userDO) {
         BizResult<UserDO> bizResult = new BizResult<>();
         BizResult<UserDO> queryResult = selectByQuery(userDO);
-        if(queryResult.isSuccess()){
+        if (queryResult.isSuccess()) {
             bizResult.setMessage("用户已存在");
             bizResult.setSuccess(false);
             return bizResult;
@@ -104,6 +104,15 @@ public class UserServiceImpl implements IUserService {
                 return bizResult;
         }
         bizResult.setSuccess(true);
+        return bizResult;
+    }
+
+    @Override
+    public BizResult<UserDO> getUserById(Long userId) {
+        BizResult<UserDO> bizResult = new BizResult<>();
+        UserDO userDO = userManager.selectByPrimaryKey(userId);
+        bizResult.setData(userDO);
+        bizResult.setMessage("用户不存在！");
         return bizResult;
     }
 }

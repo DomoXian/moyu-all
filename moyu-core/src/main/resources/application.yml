@@ -50,7 +50,9 @@ spring:
       min-idle: 0
     #连接超时
     timeout: 30000
-
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    joda-date-time-format: yyyy-MM-dd HH:mm:ss
 # mybatis
 mybatis:
   mapper-locations: classpath*:mapper/**/*.xml
@@ -61,4 +63,11 @@ mybatis:
 logging:
   path: /Users/xianguo1/logs
   config: classpath:moyu-logback.xml
+
+  # eureka-client配置
+eureka:
+  client:
+    service-url:
+      default-zone: http://106.14.144.168:8761/eureka/
+    enabled: true
 

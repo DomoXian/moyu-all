@@ -2,7 +2,6 @@ package com.moyu.service;
 
 import com.moyu.biz.BizResult;
 import com.moyu.dal.model.UserDO;
-import com.moyu.model.form.UserForm;
 
 /**
  * Created by XianGuo
@@ -38,5 +37,10 @@ public interface IUserService {
      * 校验用户信息
      */
     BizResult validUser(UserDO userDO);
+
+    /**
+     * 获取用户信息
+     */
+    BizResult<UserDO> getUserById(Long userId);
 
 }
