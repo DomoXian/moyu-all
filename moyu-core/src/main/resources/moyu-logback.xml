@@ -10,11 +10,6 @@
         <property name="WARN_FILE_PATH" value="/Users/xianguo1/logs/moyu/local/warn"/>
         <property name="ERROR_FILE_PATH" value="/Users/xianguo1/logs/moyu/local/error"/>
     </springProfile>
-    <springProfile name="test">
-        <property name="FILE_PATH" value="/home/admin/app/logs/moyu/test"/>
-        <property name="WARN_FILE_PATH" value="/home/admin/app/logs/moyu/test/warn"/>
-        <property name="ERROR_FILE_PATH" value="/home/admin/app/logs/moyu/test/error"/>
-    </springProfile>
     <springProfile name="dev">
         <property name="FILE_PATH" value="/home/admin/app/logs/moyu/dev"/>
         <property name="WARN_FILE_PATH" value="/home/admin/app/logs/moyu/dev/warn"/>
@@ -32,7 +27,7 @@
         </encoder>
     </appender>
 
-    <springProfile name="dev, online, local, test">
+    <springProfile name="dev, online, local">
         <appender name="TEST-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
             <!-- 文件路径 -->
             <file>${FILE_PATH}/jetty_stdout.log</file>
