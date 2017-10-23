@@ -1,2 +1,10 @@
 server:
   port: 8084
+# eureka-client配置
+eureka:
+  client:
+    service-url:
+      default-zone: http://106.14.144.168:8761/eureka/
+  instance:
+    ip-address: 106.14.144.168
+    prefer-ip-address: true
