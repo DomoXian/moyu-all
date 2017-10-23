@@ -1,6 +1,8 @@
 spring:
   profiles:
     active: local
+  application:
+    name: moyu
   datasource:
     driverClassName: com.mysql.jdbc.Driver
     username: root
@@ -69,5 +71,5 @@ eureka:
   client:
     service-url:
       default-zone: http://106.14.144.168:8761/eureka/
-    enabled: true
+
 
