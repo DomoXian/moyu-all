@@ -13,7 +13,7 @@
     <parent>
         <groupId>com.moyu</groupId>
         <artifactId>moyu-all</artifactId>
-        <version>${moyu.version}</version><!-- lookup parent from repository -->
+        <version>1.0.1</version>
     </parent>
 
     <dependencies>
@@ -41,20 +41,10 @@
         </dependency>
 
         <!--本地依赖-->
-        <dependency>
-            <groupId>com.moyu</groupId>
-            <artifactId>moyu-common</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>com.moyu</groupId>
             <artifactId>moyu-dao</artifactId>
-        </dependency>
-
-        <!--第三方库依赖-->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
         </dependency>
 
         <dependency>
@@ -66,15 +56,16 @@
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
         </dependency>
+
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-        </dependency>
 
+        <dependency>
+            <groupId>com.domo</groupId>
+            <artifactId>zomo-common</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -84,6 +75,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
         </plugins>
     </build>
 
