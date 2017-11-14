@@ -6,9 +6,9 @@
               value="%date{yyyy-MM-dd HH:mm:ss} | %highlight(%-5level) | %boldYellow(%thread) | %boldGreen(%logger) | %msg | [%file:%line]%n "/>
 
     <springProfile name="local">
-        <property name="FILE_PATH" value="/Users/xianguo1/logs/moyu/local"/>
-        <property name="WARN_FILE_PATH" value="/Users/xianguo1/logs/moyu/local/warn"/>
-        <property name="ERROR_FILE_PATH" value="/Users/xianguo1/logs/moyu/local/error"/>
+        <property name="FILE_PATH" value="${user.home}/logs/moyu/local"/>
+        <property name="WARN_FILE_PATH" value="${user.home}/logs/moyu/local/warn"/>
+        <property name="ERROR_FILE_PATH" value="${user.home}/logs/moyu/local/error"/>
     </springProfile>
     <springProfile name="dev">
         <property name="FILE_PATH" value="/home/admin/app/logs/moyu/dev"/>
